@@ -1,0 +1,20 @@
+mixin buttonMobile(image, title)
+  summary
+    img.button-list_mobile__item-img(src=`./src/img/${image}-icon.svg`)
+    .button-list_mobile__item-title #{title}
+
+section.button-list_mobile
+  details.button-list_mobile__item
+    +buttonMobile("trade", "Самостоятельно торговать")
+    include ./tabcontent-trade.pug
+    section.button-list_mobile__item-bg
+
+  details.button-list_mobile__item
+    +buttonMobile("invest", "Инвестировать")
+    include ./tabcontent-invest.pug
+    section.button-list_mobile__item-bg
+    
+  details.button-list_mobile__item
+    +buttonMobile("involve", "Привлекать инвесторов")
+    include ./tabcontent-involve.pug
+    section.button-list_mobile__item-bg

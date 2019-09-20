@@ -1,0 +1,31 @@
+- 
+  var buttonList = [
+
+    {
+      image: "./src/img/trade-icon.svg",
+      title: "Торговать",
+      anchor: "trade",
+      id: "tradeBtn"
+    },
+    {
+      image: "./src/img/invest-icon.svg",
+      title: "Инвестировать",
+      anchor: "invest",
+      id: "investBtn"
+    },
+    {
+      image: "./src/img/involve-icon.svg",
+      title: "Привлекать инвесторов",
+      anchor: "involve",
+      id: "involveBtn"
+    },
+  ];
+
+mixin button(action)
+  section.button-list__item(id=action.id data-action=action.anchor)
+    img.button-list__item-img(src=action.image)
+    .button-list__item-title= action.title
+
+section#buttonList.button-list
+  for action in buttonList
+    +button(action)

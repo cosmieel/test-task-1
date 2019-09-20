@@ -1,0 +1,18 @@
+section
+  .content
+    .tabs
+      button#tradeLink.tablinks.active(data-action='trade')
+        p Торговать
+      button#investLink.tablinks(data-action='invest')
+        p Инвестировать
+      button#involveLink.tablinks(data-action='involve')
+        p Привлекать инвесторов
+
+    #trade.tabcontent.active(data-action='trade')
+      include ./tabcontent-trade.pug
+
+    #invest.tabcontent(data-action='invest')
+      include ./tabcontent-invest.pug
+      
+    #involve.tabcontent(data-action='involve')
+      include ./tabcontent-involve.pug
